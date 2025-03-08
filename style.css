@@ -17,9 +17,47 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 
-#bulb{
-    font-size: 250px;
-    box-shadow: 2px 2px 15px 2px ;
+.bulb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    height: 165px;
+    width: 152px;
+    border-radius: 70px 70px 60px 60px ;
+    position: relative;
+    background-color: rgb(249, 245, 245);  
+    box-shadow:0 6px 2px 1px rgb(84, 84, 84);
+    
+}
+.bulb::before{
+    position: absolute;
+    content:" ";
+    background-color: bisque;
+    width: 165px;
+    height: 100px;
+    clip-path: polygon(0 0, 100% 0, 76% 100%, 22% 100%);
+    border-radius: 165px;
+    top: 95px;
+    z-index: -1;
+}
+.bulb::after{
+    position: absolute;
+    content:" ";
+    background-color: rgb(126, 110, 93);
+    width: 110px;
+    height: 60px;
+    clip-path: polygon(0 0, 100% 0, 76% 100%, 22% 100%);
+    border-radius: 295px;
+    top: 165px;
+    z-index: -2;
+}
+
+
+button{
+    margin-top: 70px;
+    padding: 5px 20px ;
 }
